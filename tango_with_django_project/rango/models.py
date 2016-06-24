@@ -8,6 +8,9 @@ class Category(models.Model):
     
     def __str__(self):
         return self.name
+    
+    class Meta:
+        verbose_name_plural = 'Categories'
 
 class Page(models.Model):
     category = models.ForeignKey(Category)
@@ -17,3 +20,6 @@ class Page(models.Model):
     
     def __str__(self):
         return self.title
+    
+    class Meta:
+        verbose_name_plural = 'Pages'
