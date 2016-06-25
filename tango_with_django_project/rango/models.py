@@ -2,9 +2,8 @@ from django.db import models
 
 class Category(models.Model):
     name = models.CharField(max_length=128, unique=True)
-    # Not in the tutorial yet
-    # visits = models.IntegerField(default=0)
-    # likes = models.IntegerField(default=0)
+    visits = models.IntegerField(default=0)
+    likes = models.IntegerField(default=0)
     
     def __str__(self):
         return self.name
